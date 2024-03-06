@@ -77,8 +77,8 @@ def main():
     print(feat_path)
 
     # Initialize the CLIP model
-    vision_tower = "./model_zoo/LAVIS/eva_vit_g.pth"
-    image_processor = "./model_zoo/OpenAI/clip-vit-large-patch14"
+    vision_tower = "/content/LLaMA-VID/model_zoo/LAVIS/eva_vit_g.pth"
+    image_processor = "/content/LLaMA-VID/model_zoo/OpenAI/clip-vit-large-patch14"
     vision_tower = EVAVisionTowerLavis(vision_tower, image_processor, args=None).cuda()
     vision_tower.eval()
     image_processor = vision_tower.image_processor

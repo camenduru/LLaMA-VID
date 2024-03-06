@@ -21,8 +21,8 @@ def parse_args():
     parser.add_argument("--video_dir", required=True, help="Path to read the videos from.")
     parser.add_argument("--files_dir", required=True, help="Path to read the shot detection result from.")
     parser.add_argument("--feat_dir", required=True, help="The output dir to save the features in.")
-    parser.add_argument("--vision_tower", default="./model_zoo/LAVIS/eva_vit_g.pth", help="Vision backbone to process the video.")
-    parser.add_argument("--image_processor", defalut="./llamavid/processor/clip-patch14-224", help="Image processor to pre-process the video.")
+    parser.add_argument("--vision_tower", default="/content/LLaMA-VID/model_zoo/LAVIS/eva_vit_g.pth", help="Vision backbone to process the video.")
+    parser.add_argument("--image_processor", defalut="/content/LLaMA-VID/llamavid/processor/clip-patch14-224", help="Image processor to pre-process the video.")
     parser.add_argument("--index", type=int, default=0, help="index of chunk.")
     parser.add_argument("--chunk", type=int, default=1, help="number of chunk.")
     parser.add_argument("--infer_batch", required=False, type=int, default=48,
